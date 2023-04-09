@@ -1,0 +1,175 @@
+@charset "utf-8";
+.title{
+    color:blue;
+    text-shadow: 2px 2px yellow;
+    text-align: center;
+}
+fieldset{
+background-color: cyan;
+border-radius: 5px;
+border: thin solid #ccc
+
+}
+
+legend{
+    background-color: red;
+    color: white;
+}
+
+input[type=text],[type=number]{
+    background-color: yellow;
+    border: thin solid thistle;
+    border-radius: 5px;
+}
+
+
+.buttonshow{
+    width: 90px;
+    background-color: pink;
+    border-radius: 5px;
+    border: thin solid #ccc;
+
+}
+
+
+/* Modal */
+.modal {
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: flex-start; /* or center */
+    z-index: 1000; /* depending on what z-index values exist in your page, in order for the modal layer to sit on top of other content */
+    overflow: auto; /* enable scrolling if needed - although this is not really necessary since we are going take care of overflow in modal-content */
+    background-color: rgba(0,0,0,0.8);
+  }
+  .modal.modal-show {
+    animation: fadeIn 0.1s ease-in-out forwards;
+  }
+  .modal.modal-hide {
+    animation: fadeOut 0.1s ease-in-out 0.1s forwards;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    display: inline-block;
+    
+    border: 1px solid #888;
+    width: 50%;
+  }
+  .modal.modal-show .modal-content {
+    animation: fadeInDown 0.3s ease-in-out forwards;
+  }
+  .modal.modal-hide .modal-content {
+    animation: fadeOutUp 0.2s ease-in-out forwards;
+  }
+  
+  .modal-body {
+    padding: 30px;
+  
+  }
+  
+  .modal-dialog {
+    padding: 30px;
+    width: 100%;
+    display:flex;
+    padding: 0 20px;
+  }
+  
+  .modal-bottom {
+    text-align: right;
+    background-color: rgb(216, 213, 213);
+    padding: 10px;
+    
+  
+  }
+  
+  /* The Close Button */
+  .modal-close {
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border-width:2px;
+    border-color: blue;
+  
+    
+  }
+  .modal-close:hover, .modal-close:focus {
+    color: rgba(0,0,0,0.5);
+  }
+  
+  #contentModal1 {
+  width: 25%;
+  
+  }
+  
+  #contentModal2 {
+  width: 60%;
+  
+  }
+  
+  #contentModal3 {
+  
+    width: 46%;
+  }
+  
+  #contentModal5 {
+  
+    width: 46%;
+  }
+  
+  #contentModal4 {
+  
+    width: 46%;
+  }
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-3rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); 
+    }
+  }
+  @keyframes fadeOutUp {
+    0% { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-3rem);
+    }
+  }
+  
+  @media(max-width: 992px) {
+    html { font-size: 14px; }
+    .modal-content { width: 80%; }
+  }
+  @media(max-width:767px) {
+    html { font-size: 12px; }
+    .modal-content { padding: 2rem 1rem 1rem 1rem; width: 90%; }
+    .modal-content h1 { margin-bottom: 1.5rem; }
+  }
+  
